@@ -1,0 +1,21 @@
+<div class = "container">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" aria-label="Recipient's username" #inputName aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click) = "addToDo(inputName)">Добавить</button>
+    </div>
+  </div>
+  <ul class="list-group">
+    <li class = "list-group-item" *ngFor = "let i of data; let idx = index">
+      {{i}}
+      <button type="button" class="btn btn-primary btn-sm" (click) = "ShowEditForm(idx, inputName1, divItem)">Изменить</button>
+      <button type="button" class="btn btn-danger btn-sm" (click) = "DelItem(idx)">Удалить</button>
+      <div #divItem class="input-group mb-3" style = "display: none">
+        <input type="text" class="form-control" aria-label="Recipient's username" #inputName1 aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon3" (click) = "saveItemToDo(idx, inputName1, divItem)">Сохранить</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

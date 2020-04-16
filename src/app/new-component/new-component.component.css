@@ -1,0 +1,12 @@
+.container {
+  margin-top: 10vh;
+}
+
+.btn-primary, .btn-danger {
+  float: right;
+  margin-left: 10px;
+}
+
+.input-group {
+  margin-top: 2vh;
+}
